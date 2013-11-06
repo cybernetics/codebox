@@ -30,6 +30,24 @@
         "temp": "0.6.0",
         "wrench": "1.5.4"
     },
+    "main": "http://localhost:8000",
+    "node-main": "./bin/codebox-nw.js",
+    "js-flags": "--harmony",
+    "single-instance": true,
+    "webkit": {
+        "plugin": true
+    },
+    "chromium-args" : "--disable-accelerated-video --enable-webgl --enable-webaudio --ignore-gpu-blacklist --force-compositing-mode --remote-debugging-port=10138 --harmony --enable-devtools-experiments --enable-experimental-web-platform-features --enable-experimental-webkit-features",
+    "window": {
+        "width": 1200,
+        "height": 800,
+        "min_height": 400,
+        "min_width": 400,
+        "show":true,
+        "toolbar": true,
+        "frame": true
+    },
+
     "bin": {
         "codebox": "./bin/codebox.js"
     },
