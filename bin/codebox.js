@@ -12,7 +12,7 @@ cli.command('run')
     this.key = this.key || process.env.CODEBOXIO_TOKEN;
     this.codeboxio = this.codeboxio || process.env.CODEBOXIO_HOST || "https://api.codenow.io";
 
-    this.directory = this.directory || process.env.WORKSPACE_DIR || "../wapp";
+    this.directory = this.directory || process.env.WORKSPACE_DIR || "./";
     this.title = this.title || process.env.WORKSPACE_NAME || "";
 
     var config = {
@@ -63,5 +63,5 @@ cli.option('-k, --key <web token>', 'CodeNow Bauth token.');
 cli.option('-c, --codeboxio <codebox manager host>', 'Codebox host (ex: https://api.codenow.io).');
 
 cli.version(pkg.version).parse(process.argv);
-if (!cli.args.length) {cli.emit('run', []);}
+if (!cli.args.length) cli.help();
 
