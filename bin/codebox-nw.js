@@ -11,7 +11,7 @@ function binPath() {
 
 // Fork file
 function spawnBin() {
-    var p = cp.spawn(binPath(), [], {
+    var p = cp.spawn(binPath(), ['run'], {
         env: _.defaults({
             'WORKSPACE_DIR': '/Users/aaron/git/wapp'
         }, process.env)
